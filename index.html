@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Report: Aleksa Spasic - @alexxmarketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0A192F;
+            --white: #FFFFFF;
+            --off-white: #F8F8F8;
+            --accent-blue: #007bff;
+            --accent-green: #28a745;
+            --accent-red: #dc3545;
+            --accent-orange: #fd7e14;
+            --text-dark: #333;
+            --text-light: #eee;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 2em; }
+        h3 { font-size: 1.6em; }
+        h4 { font-size: 1.3em; }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 30px 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            color: var(--white);
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-blue);
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar .logo img {
+            max-width: 150px;
+            height: auto;
+            filter: invert(1); /* Example for a placeholder logo */
+        }
+
+        .sidebar .trend-radar, .sidebar .algorithm-signals {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar .trend-radar h3, .sidebar .algorithm-signals h3 {
+            color: var(--white);
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .trend-radar ul, .sidebar .algorithm-signals ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar .trend-radar ul li, .sidebar .algorithm-signals ul li {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar .trend-radar ul li .urgency, .sidebar .algorithm-signals ul li .urgency {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .urgency.red { background-color: var(--accent-red); }
+        .urgency.orange { background-color: var(--accent-orange); }
+        .urgency.yellow { background-color: #ffc107; }
+        .urgency.green { background-color: var(--accent-green); }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 40px 60px;
+            max-width: calc(100% - 280px);
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header .section-number {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--navy);
+            opacity: 0.1;
+            margin-right: 20px;
+            line-height: 1;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            color: var(--navy);
+            font-size: 2.2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--navy);
+            color: var(--white);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--off-white);
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .persona-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .persona-card h4 {
+            color: var(--navy);
+            margin-top: 0;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .persona-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .persona-card ul li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .persona-card ul li strong {
+            color: var(--navy);
+            margin-right: 5px;
+        }
+
+        .post-item {
+            background-color: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .post-item p {
+            margin: 5px 0;
+        }
+
+        .post-item .caption {
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .post-item .engagement {
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        .gap-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .gap-item h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .gap-item h4 .urgency-tag {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        .urgency-tag.red { background-color: var(--accent-red); }
+        .urgency-tag.orange { background-color: var(--accent-orange); }
+        .urgency-tag.yellow { background-color: #ffc107; }
+
+        .gap-item strong {
+            color: var(--navy);
+        }
+
+        .roadmap-phase {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .roadmap-phase h3 {
+            color: var(--accent-green);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .roadmap-phase ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .roadmap-phase ul li {
+            margin-bottom: 8px;
+        }
+
+        .newsjacking-opportunity {
+            background-color: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .newsjacking-opportunity h4 {
+            margin-top: 0;
+            color: var(--accent-blue);
+        }
+
+        .newsjacking-opportunity .hook-preview {
+            background-color: var(--white);
+            border: 1px dashed var(--border-color);
+            padding: 15px;
+            border-radius: 5px;
+            font-style: italic;
+            margin-top: 10px;
+            position: relative;
+            padding-right: 50px; /* Space for copy button */
+        }
+
+        .hook-generator-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: flex-end;
+        }
+
+        .hook-generator-controls div {
+            flex: 1;
+        }
+
+        .hook-generator-controls label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .hook-generator-controls select,
+        .hook-generator-controls button {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hook-generator-controls button {
+            background-color: var(--accent-blue);
+            color: var(--white);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: auto; /* Align button to bottom */
+        }
+
+        .hook-generator-controls button:hover {
+            background-color: #0056b3;
+        }
+
+        #generatedHookDisplay {
+            background-color: var(--off-white);
+            border: 1px dashed var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            font-size: 1.1em;
+            position: relative;
+            margin-bottom: 30px;
+            padding-right: 50px;
+        }
+
+        .hook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .grid-hook-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 0.95em;
+            position: relative;
+            padding-right: 50px; /* Space for copy button */
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #6c757d;
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            padding: 6px 10px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .copy-button:hover {
+            background-color: #5a6268;
+        }
+
+        .copy-button:active {
+            background-color: #495057;
+        }
+
+        .copy-button.copied {
+            background-color: var(--accent-green);
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 250px;
+                padding: 20px 15px;
+            }
+            .main-content {
+                padding: 30px 40px;
+                max-width: calc(100% - 250px);
+            }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.8em; }
+            .section-header .section-number {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding-bottom: 20px;
+            }
+            .sidebar nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .sidebar nav ul li {
+                margin-bottom: 0;
+            }
+            .sidebar nav ul li a {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            .main-content {
+                max-width: 100%;
+                padding: 20px 25px;
+            }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            .section-header .section-number {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            .persona-grid, .hook-grid {
+                grid-template-columns: 1fr;
+            }
+            .hook-generator-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .sidebar .trend-radar, .sidebar .algorithm-signals {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://placehold.co/150x50/FFFFFF/0A192F?text=ALEXXMARKETING" alt="AlexxMarketing Logo">
+            </div>
+            <h2>Growth Report</h2>
+            <nav>
+                <ul>
+                    <li><a href="#executive-summary">01 Executive Summary</a></li>
+                    <li><a href="#audience-icp">02 Audience & ICP</a></li>
+                    <li><a href="#platform-analysis">03 Platform Analysis</a></li>
+                    <li><a href="#what-resonates">04 What Resonates</a></li>
+                    <li><a href="#gaps-opportunities">05 Gaps & Opportunities</a></li>
+                    <li><a href="#content-strategy">06 Content Strategy</a></li>
+                    <li><a href="#roadmap-to-1m">07 Roadmap to 1M</a></li>
+                    <li><a href="#trend-intelligence">08 Trend Intelligence</a></li>
+                    <li><a href="#newsjacking-engine">09 Newsjacking Engine</a></li>
+                    <li><a href="#hook-creator">10 Hook Creator</a></li>
+                </ul>
+            </nav>
+            <div class="trend-radar">
+                <h3>Live Trend Radar</h3>
+                <ul>
+                    <li><span class="urgency red"></span> AI Automation for Creators</li>
+                    <li><span class="urgency orange"></span> Short-Form Video Monetization</li>
+                    <li><span class="urgency yellow"></span> Community Building & Gated Content</li>
+                    <li><span class="urgency red"></span> Personalized Content Systems</li>
+                    <li><span class="urgency orange"></span> Affiliate Marketing with AI</li>
+                    <li><span class="urgency yellow"></span> Web3/Decentralized Marketing</li>
+                </ul>
+            </div>
+            <div class="algorithm-signals">
+                <h3>Algorithm Signals</h3>
+                <ul>
+                    <li><span class="urgency red"></span> Comment-to-DM conversions are KING.</li>
+                    <li><span class="urgency orange"></span> Saves & Shares boost reach exponentially.</li>
+                    <li><span class="urgency yellow"></span> Long watch-time on Reels = virality.</li>
+                    <li><span class="urgency green"></span> Carousels with high swipe-through rate perform.</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <section id="executive-summary">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2>Unlock Viral Growth: Your Blueprint to Dominate the Digital Arena!</h2>
+                </div>
+                <p>Alright, Aleksa! You're already crushing it, building an audience between <strong>10K-20K followers</strong> with <strong>100-200 posts</strong>. That's not just numbers, that's real influence. We've analyzed your entire game, from your top-performing posts to your core message, and we're ready to hand you the SYSTEM to scale your impact and income. This isn't just a report; it's your new playbook to go from strong to unstoppable.</p>
+
+                <h3>Key Metrics Snapshot:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Current Status</th>
+                            <th>Insight</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Followers</td>
+                            <td>10K-20K</td>
+                            <td>Solid foundation, primed for exponential growth.</td>
+                        </tr>
+                        <tr>
+                            <td>Total Posts</td>
+                            <td>100-200</td>
+                            <td>Consistent content output, building authority.</td>
+                        </tr>
+                        <tr>
+                            <td>Top Post Engagement</td>
+                            <td>731 likes | 1,210 comments</td>
+                            <td>Proof of concept: your audience craves direct, actionable value.</td>
+                        </tr>
+                        <tr>
+                            <td>Website</td>
+                            <td><a href="https://alexxmarketing.com" target="_blank">alexxmarketing.com</a></td>
+                            <td>Central hub for your empire, ready for optimized conversion.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Your 4-Pillar Strategy for Unstoppable Scale:</h3>
+                <ol>
+                    <li><strong>Hyper-Targeted Lead Generation:</strong> Double down on comment-to-DM strategies that have already proven to convert.</li>
+                    <li><strong>AI-Powered Content Dominance:</strong> Leverage your expertise in AI tools to create an endless stream of viral content, faster and more efficiently.</li>
+                    <li><strong>Community & Conversion Pathways:</strong> Build robust systems to nurture your engaged audience into high-ticket clients.</li>
+                    <li><strong>Strategic Platform Expansion:</strong> Identify and conquer new platforms where your unique message can resonate and attract fresh leads.</li>
+                </ol>
+
+                <p><strong>Core Diagnosis:</strong> You've cracked the code on generating massive engagement through direct, value-driven calls to action. Your audience is hungry for your "SYSTEM" and "FREE TOOLS." The current challenge isn't *if* you can get attention, but *how* to systematize that attention into predictable, scalable client acquisition and revenue. We're about to turn your viral moments into a viral machine. It's time to lock in and build that empire.</p>
+            </section>
+
+            <section id="audience-icp">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2>Who's Locking In? Your Ideal Clients, Decoded.</h2>
+                </div>
+                <p>You're not just attracting followers; you're attracting future founders and creators ready to build. Based on the comments and engagement, we've identified your two core audiences. These aren't just profiles; they're the people desperate for your SYSTEM.</p>
+
+                <div class="persona-grid">
+                    <div class="persona-card">
+                        <h4>Primary Persona: The Aspiring AI Entrepreneur</h4>
+                        <ul>
+                            <li><strong>Age:</strong> 25-35</li>
+                            <li><strong>Occupation:</strong> Freelancer, aspiring online business owner, content creator, side-hustler.</li>
+                            <li><strong>Pain:</strong> Stuck in the grind, overwhelmed by information, struggling to get clients, spending too much on ads, doesn't know where to start with AI.</li>
+                            <li><strong>Desire:</strong> To build a 6-figure online business, generate unlimited leads with $0 spent on ads, leverage AI for efficiency, achieve financial freedom, become their own boss.</li>
+                            <li><strong>Trigger:</strong> Sees a post offering a "SYSTEM" or "FREE TOOLS" to get clients or make money online.</li>
+                        </ul>
+                    </div>
+                    <div class="persona-card">
+                        <h4>Secondary Persona: The Growth-Hungry Business Owner</h4>
+                        <ul>
+                            <li><strong>Age:</strong> 30-45</li>
+                            <li><strong>Occupation:</strong> Small business owner, digital marketer, agency owner, consultant.</li>
+                            <li><strong>Pain:</strong> Stagnant growth, relying on outdated methods, struggling with content creation, missing out on AI advantages, needing to scale client acquisition.</li>
+                            <li><strong>Desire:</strong> To scale their existing business, dominate their niche with cutting-edge AI tools, optimize lead generation, increase virality and brand awareness.</li>
+                            <li><strong>Trigger:</strong> Sees content about "85 FREE TOOLS" or "WEBSITES THAT FEEL SO ILLEGAL" to gain an unfair advantage.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Audience Sizing & Engagement Potential:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Audience Segment</th>
+                            <th>Engagement Level (Deduction)</th>
+                            <th>Growth Potential</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aspiring AI Entrepreneur</td>
+                            <td>Very High (Comments "SYSTEM", "HOW")</td>
+                            <td>Massive – This group is actively seeking your core offer.</td>
+                        </tr>
+                        <tr>
+                            <td>Growth-Hungry Business Owner</td>
+                            <td>High (Likes, Saves on tool lists)</td>
+                            <td>Significant – Ready to adopt tools for efficiency and scale.</td>
+                        </tr>
+                        <tr>
+                            <td>General Online Business Enthusiasts</td>
+                            <td>Moderate (Likes on general business tips)</td>
+                            <td>Moderate – Can be converted with targeted messaging.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="platform-analysis">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>Instagram Domination: Your Current Playbook & Power Plays</h2>
+                </div>
+                <p>Your Instagram is a lead-generating machine, Aleksa. You're consistently delivering high-value, action-oriented content that gets people to COMMENT and engage. This isn't just about likes; it's about building a direct line to your audience and converting them.</p>
+
+                <h3>@alexxmarketing — Performance Overview:</h3>
+                <ul>
+                    <li><strong>Followers:</strong> 10K-20K – A strong, engaged base ready for scale.</li>
+                    <li><strong>Posts:</strong> 100-200 – Consistent presence, building authority and a content library.</li>
+                    <li><strong>Engagement Strategy:</strong> Masterful use of "Comment 'KEYWORD'" to drive interaction and initiate DM conversations. This is your secret sauce for lead gen.</li>
+                    <li><strong>Content Focus:</strong> Heavily weighted towards AI tools, lead generation, and online business growth. This aligns perfectly with your brand mission.</li>
+                </ul>
+
+                <h3>Top 10 Posts by Engagement: The Viral Hits Decoded</h3>
+                <p>This is where the magic happens. Your audience is screaming what they want, and it's clear: they want SYSTEMS, FREE TOOLS, and the blueprint to get clients with $0 spent on ads. Let's break down the top performers.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Type</th>
+                            <th>Engagement (Likes | Comments)</th>
+                            <th>Caption Snippet</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>POST</td>
+                            <td>731 likes | 1,210 comments</td>
+                            <td>🚨 Comment "SYSTEM" and to start getting clients with organic content...</td>
+                            <td><a href="https://www.instagram.com/p/DHGTXxCN6Gz/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>POST</td>
+                            <td>696 likes | 630 comments</td>
+                            <td>Comment “SYSTEM” to join my community 7 days for free and start making money...</td>
+                            <td><a href="https://www.instagram.com/p/DHqWwIktiOK/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>POST</td>
+                            <td>470 likes | 428 comments</td>
+                            <td>🚨 Comment "SYSTEM" and learn how to get unlimited leads with $0 spent on ads...</td>
+                            <td><a href="https://www.instagram.com/p/DGiOr1HIdgb/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>POST</td>
+                            <td>217 likes | 65 comments</td>
+                            <td>Now Comment “MILLION” to start building an audience on social media...</td>
+                            <td><a href="https://www.instagram.com/p/DVdsQnsjALr/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>REEL</td>
+                            <td>123 likes | 0 comments</td>
+                            <td>🔥 85 FREE TOOLS TO BUILD A BUSINESS IN 2026 🔥 💾 SAVE THIS TO BOOST PRODUCTIVITY 💾...</td>
+                            <td><a href="https://www.instagram.com/p/DVbgWYaDemy/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>POST</td>
+                            <td>121 likes | 0 comments</td>
+                            <td>👇 PAID VS. FREE ALTERNATIVES 👇 1. Content Ideas: Viralfindr (Paid) vs. ViralityAI.net (Free)...</td>
+                            <td><a href="https://www.instagram.com/p/DVgLSWXDDbk/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>REEL</td>
+                            <td>112 likes | 3 comments</td>
+                            <td>🚨 85 FREE TOOLS TO DOMINATE 2026 👇 IDEAS 1. ViralityAl .net...</td>
+                            <td><a href="https://www.instagram.com/p/DVgzsITDTmx/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>REEL</td>
+                            <td>91 likes | 3 comments</td>
+                            <td>🚨 35 WEBSITES THAT FEEL SO ILLEGAL 🚨 1. Chat-animator .com: Make animated chat videos EASILY...</td>
+                            <td><a href="https://www.instagram.com/p/DVfwlQLjcIh/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>POST</td>
+                            <td>79 likes | 7 comments</td>
+                            <td>✅️ Comment “HOW “ to start landing clients 🚀...</td>
+                            <td><a href="https://www.instagram.com/p/DVi4Yo6DIGn/" target="_blank">View Post</a></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>REEL</td>
+                            <td>74 likes | 9 comments</td>
+                            <td>✅ Comment "HOW" to start landing clients with your own AI business...</td>
+                            <td><a href="https://www.instagram.com/p/DVeITeXjSw3/" target="_blank">View Post</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="what-resonates">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>Your Audience's Command: What They're Actually Responding To</h2>
+                </div>
+                <p>This is where we extract the gold. Your top posts aren't just random hits; they're a direct signal from your audience telling you exactly what they want. Let's break down the patterns that create explosive engagement.</p>
+
+                <h3>Topics That Drive Explosive Engagement:</h3>
+                <ul>
+                    <li><strong>"SYSTEM" for Client Acquisition:</strong> Your absolute top performers (Posts 1, 2, 3) are all about a "SYSTEM" to get clients, make money, and generate leads with $0 spent on ads. This is your core value proposition.
+                        <ul>
+                            <li><strong>Real Numbers:</strong> 1,210 comments, 630 comments, 428 comments on these three posts alone. This is not just engagement; it's lead generation in action.</li>
+                        </ul>
+                    </li>
+                    <li><strong>FREE Tools & Resources:</strong> Posts and Reels offering lists of "FREE TOOLS" or "WEBSITES THAT FEEL SO ILLEGAL" (Posts 5, 6, 7, 8) generate high likes and saves.
+                        <ul>
+                            <li><strong>Real Numbers:</strong> Post 5 (123 likes), Post 6 (121 likes), Reel 7 (112 likes), Reel 8 (91 likes). These are massive value bombs.</li>
+                        </ul>
+                    </li>
+                    <li><strong>"HOW" to Land Clients / Build an AI Business:</strong> Direct "how-to" content focused on client acquisition and AI business building also performs strongly (Posts 9, 10).
+                        <ul>
+                            <li><strong>Real Numbers:</strong> Post 9 (7 comments), Reel 10 (9 comments). While lower in comments than "SYSTEM," these are still high-intent engagements.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Language Patterns in High-Performing Captions:</h3>
+                <ul>
+                    <li><strong>Direct Call to Action (CTA):</strong> Almost every top post uses "Comment 'KEYWORD'" as the primary CTA. This is non-negotiable for engagement and lead generation.</li>
+                    <li><strong>Urgency & Aspiration:</strong> Emojis like 🚨 and 🔥, combined with phrases like "start getting clients," "make money," "dominate 2026," and "unlimited leads," create a powerful pull.</li>
+                    <li><strong>Benefit-Oriented Language:</strong> Focus on "0 spent on ads," "free," "easy," "unlimited," "boost productivity," "dominate." Your audience wants shortcuts and powerful results.</li>
+                    <li><strong>The "P.S." Follower Conversion:</strong> The line "P.S. I can't message you if you don't follow @alexxmarketing" is a genius move, converting comment-driven leads into actual followers.</li>
+                </ul>
+
+                <h3>Content Formats: Reels vs. Posts Performance:</h3>
+                <ul>
+                    <li><strong>Posts with Comment CTAs:</strong> These are your absolute engagement and lead generation champions. The top 4 posts are all static image posts driving comments. This indicates your audience is willing to stop, read, and act.</li>
+                    <li><strong>Reels for Tool Lists & Discovery:</strong> Reels perform well for delivering quick, digestible lists of tools and resources. They generate good likes and saves, indicating high value retention. While comments are lower on these, they're excellent for reach and brand building.</li>
+                    <li><strong>The Hybrid Approach:</strong> Combine the lead-gen power of static posts with the reach of Reels. Use Reels to tease value, then direct to a static post for the "SYSTEM" or a deeper dive.</li>
+                </ul>
+
+                <h3>Emotional Triggers for Comments:</h3>
+                <ul>
+                    <li><strong>The Promise of a Solution:</strong> "Comment 'SYSTEM'" triggers hope and the desire for a clear path out of struggle (e.g., no clients, spending money on ads).</li>
+                    <li><strong>The Allure of "Free" & "Easy":</strong> Offering "85 FREE TOOLS" or "WEBSITES THAT FEEL SO ILLEGAL" taps into the desire for shortcuts and competitive advantage.</li>
+                    <li><strong>Aspiration & Transformation:</strong> "Start making money," "build an audience," "land clients" speaks directly to the entrepreneurial dream.</li>
+                    <li><strong>Exclusivity/Urgency:</strong> The "P.S." statement creates a slight urgency and exclusivity, prompting immediate action to follow.</li>
+                </ul>
+
+                <h3>3 Key Insights About What Your Audience Responds To:</h3>
+                <ol>
+                    <li><strong>Your Audience Craves Systems for Client Acquisition:</strong> The "SYSTEM" keyword is your golden ticket. They don't just want tips; they want a proven, step-by-step blueprint to get clients and make money, especially without ad spend.</li>
+                    <li><strong>Free, Actionable Resources are Irresistible:</strong> Lists of AI tools, free alternatives, and "illegal" websites are massive value bombs that generate saves and shares, expanding your reach.</li>
+                    <li><strong>Direct, Urgent CTAs Drive Conversion:</strong> "Comment 'KEYWORD'" combined with the "P.S. follow me" is a highly effective lead generation and follower conversion mechanism. Don't deviate from this winning formula.</li>
+                </ol>
+            </section>
+
+            <section id="gaps-opportunities">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2>Gaps & Opportunities: Unlock Your Next Level of Growth</h2>
+                </div>
+                <p>You've got the foundation, Aleksa. Now it's time to plug the leaks and amplify your impact. These aren't just suggestions; they're direct pathways to scaling your influence and income.</p>
+
+                <div class="gap-item">
+                    <h4>1. Untapped Long-Form Content <span class="urgency-tag red">RED</span></h4>
+                    <p><strong>What it costs you:</strong> Missing out on deeper authority building, SEO traffic, and converting warm leads into high-ticket clients. You're giving away massive value in short bursts but not capturing the full potential of those who want the entire SYSTEM.</p>
+                    <p><strong>The Fix:</strong> Repurpose your top-performing "SYSTEM" and "FREE TOOLS" content into comprehensive blog posts on <a href="https://alexxmarketing.com" target="_blank">alexxmarketing.com</a>. Create detailed guides, case studies, and ultimate lists. Link directly to these from your Instagram bio and swipe-up stories (once available). This positions you as the ultimate authority and captures organic search traffic.</p>
+                </div>
+
+                <div class="gap-item">
+                    <h4>2. Underutilized Email List Building <span class="urgency-tag red">RED</span></h4>
+                    <p><strong>What it costs you:</strong> You're building an audience on rented land. Instagram can change its algorithm tomorrow. You're not owning your audience, which means less control over your sales pipeline and direct communication.</p>
+                    <p><strong>The Fix:</strong> Implement a lead magnet (e.g., "The Ultimate AI Business Playbook PDF" or "100 Free AI Tools Cheatsheet") on your website. Drive traffic to it from every "Comment 'KEYWORD'" post by offering to DM the link, then encouraging email signup. This builds a direct communication channel, independent of social media algorithms.</p>
+                </div>
+
+                <div class="gap-item">
+                    <h4>3. Inconsistent "P.S." Follower Conversion <span class="urgency-tag orange">ORANGE</span></h4>
+                    <p><strong>What it costs you:</strong> Every time you don't include "P.S. I can't message you if you don't follow @alexxmarketing" on a comment-gated post, you're losing potential followers who are already interested.</p>
+                    <p><strong>The Fix:</strong> Make this a mandatory element for *every* post that asks for a comment to receive a DM. It's a proven, low-friction way to convert engaged users into followers, boosting your overall reach and authority.</p>
+                </div>
+
+                <div class="gap-item">
+                    <h4>4. Limited Reel Engagement CTAs <span class="urgency-tag yellow">YELLOW</span></h4>
+                    <p><strong>What it costs you:</strong> Your Reels are great for discovery, but many lack the powerful, comment-driving CTAs seen in your static posts. This means you're leaving engagement on the table.</p>
+                    <p><strong>The Fix:</strong> Integrate "Comment 'KEYWORD'" or "DM me 'KEYWORD'" into your Reels, both visually (text overlay) and verbally. For tool lists, ask "Which tool are you trying first? Comment below!" or "Want the full list? Comment 'TOOLS'!" This will convert passive viewers into active engagers.</p>
+                </div>
+
+                <div class="gap-item">
+                    <h4>5. Testimonial & Social Proof Integration <span class="urgency-tag yellow">YELLOW</span></h4>
+                    <p><strong>What it costs you:</strong> You're empowering people to build 6-figure businesses, but your content doesn't explicitly showcase these success stories. This is massive social proof you're not fully leveraging.</p>
+                    <p><strong>The Fix:</strong> Dedicate content to client success stories. Create Reels or carousels featuring testimonials, screenshots of results, and short interviews. Ask your successful clients for quick video snippets. This builds trust and shows new leads that your SYSTEM actually works.</p>
+                </div>
+            </section>
+
+            <section id="content-strategy">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2>Your Content Strategy: Fueling the Viral Machine</h2>
+                </div>
+                <p>This isn't just about posting; it's about strategic content creation that converts. We're doubling down on what works and expanding your reach with a clear, actionable plan. Get ready to dominate.</p>
+
+                <h3>Your 5 Core Content Pillars:</h3>
+                <ol>
+                    <li><strong>The "SYSTEM" Blueprint (Lead Generation):</strong>
+                        <p><strong>Description:</strong> Content directly offering your proven system for client acquisition, lead generation, and making money online with $0 spent on ads. These are your heavy-hitters for comment-to-DM conversions.</p>
+                        <p><strong>Examples:</strong> "Comment 'SYSTEM' to get clients with organic content," "The 3-Step System to Unlimited Leads," "My $0 Ad Spend Client Acquisition Playbook."</p>
+                    </li>
+                    <li><strong>AI Tools & Resource Goldmines (Value Bombs):</strong>
+                        <p><strong>Description:</strong> Curated lists, reviews, and tutorials of free/paid AI tools, websites, and resources that give your audience an unfair advantage. Focus on productivity, automation, and business scaling.</p>
+                        <p><strong>Examples:</strong> "85 FREE TOOLS TO DOMINATE 2026," "PAID VS. FREE AI ALTERNATIVES," "35 WEBSITES THAT FEEL SO ILLEGAL."</p>
+                    </li>
+                    <li><strong>Client Acquisition & Growth Hacks (Actionable Tips):</strong>
+                        <p><strong>Description:</strong> Practical, quick-win strategies for landing clients, generating leads, and scaling an online business, often framed as "how-to" or "secrets."</p>
+                        <p><strong>Examples:</strong> "Comment 'HOW' to start landing clients," "The #1 Secret to Organic Leads," "Stop Doing This to Get Clients."</p>
+                    </li>
+                    <li><strong>Founder Story & Mindset (Inspiration & Authority):</strong>
+                        <p><strong>Description:</strong> Content sharing your journey, insights on building a 6-figure business, overcoming challenges, and the mindset required for viral growth. This builds connection and positions you as the expert.</p>
+                        <p><strong>Examples:</strong> "How I Built a 6-Figure Business with AI," "The Mindset Shift That Generated 2 Billion Views," "My Daily Routine for Unstoppable Growth."</p>
+                    </li>
+                    <li><strong>Engagement Challenges & Community Building (Interaction):</strong>
+                        <p><strong>Description:</strong> Content designed purely to spark conversation, ask questions, or run mini-challenges that foster community and increase overall engagement metrics.</p>
+                        <p><strong>Examples:</strong> "What's your biggest AI struggle? Comment below!", "Rate this AI tool 1-10," "Join my community 7 days for free."</p>
+                    </li>
+                </ol>
+
+                <h3>Weekly Content Calendar Template:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Content Type</th>
+                            <th>Pillar Focus</th>
+                            <th>Primary CTA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Monday</strong></td>
+                            <td>REEL (List/Tutorial)</td>
+                            <td>AI Tools & Resource Goldmines</td>
+                            <td>SAVE THIS! Comment "TOOLS" for the full list.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tuesday</strong></td>
+                            <td>POST (Carousel/Image)</td>
+                            <td>The "SYSTEM" Blueprint</td>
+                            <td>🚨 Comment "SYSTEM" to get clients with organic content. P.S. I can't message you if you don't follow @alexxmarketing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wednesday</strong></td>
+                            <td>REEL (Hook/Value)</td>
+                            <td>Client Acquisition & Growth Hacks</td>
+                            <td>Comment "HOW" to land clients.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thursday</strong></td>
+                            <td>POST (Text/Quote/Insight)</td>
+                            <td>Founder Story & Mindset</td>
+                            <td>What's your biggest challenge? Share below!</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Friday</strong></td>
+                            <td>REEL (Trending Audio/Visual)</td>
+                            <td>Engagement Challenges / AI Tools</td>
+                            <td>Which AI tool changed your game? Comment!</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Saturday</strong></td>
+                            <td>POST (Carousel/Deep Dive)</td>
+                            <td>AI Tools & Resource Goldmines</td>
+                            <td>👇 PAID VS. FREE ALTERNATIVES 👇 SAVE THIS!</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sunday</strong></td>
+                            <td>STORIES (Q&A/Polls)</td>
+                            <td>Community Building</td>
+                            <td>Ask me ANYTHING about AI & clients!</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Content Mix Recommendations:</h3>
+                <ul>
+                    <li><strong>60% Lead Generation (SYSTEM/HOW posts):</strong> These are your highest converting assets. Prioritize them.</li>
+                    <li><strong>30% Value Bombs (AI tools/resources):</strong> Drive saves, shares, and build authority. Use Reels for quick hits and Carousels for deeper dives.</li>
+                    <li><strong>10% Brand Building (Founder Story/Community):</strong> Foster connection and trust.</li>
+                    <li><strong>Always include your "P.S. I can't message you if you don't follow @alexxmarketing" on comment-gated content.</strong></li>
+                    <li><strong>Repurpose relentlessly:</strong> Turn a top-performing Reel into a carousel, then a thread, then a blog post. Maximize every piece of content.</li>
+                </ul>
+            </section>
+
+            <section id="roadmap-to-1m">
+                <div class="section-header">
+                    <span class="section-number">07</span>
+                    <h2>Roadmap to 1 Million: Your Blueprint for Unstoppable Scale</h2>
+                </div>
+                <p>This isn't a dream, Aleksa. This is a strategic, phased attack plan to hit 1 Million followers and beyond. We're leveraging your proven tactics and scaling them to an insane degree. Lock in, because this is about to get real.</p>
+
+                <div class="roadmap-phase">
+                    <h3>Phase 1: Current (10K-20K) → 100K Followers (Next 3-6 Months)</h3>
+                    <p><strong>Goal:</strong> Solidify your lead generation machine, maximize organic reach, and establish undeniable authority in AI-powered growth.</p>
+                    <ul>
+                        <li><strong>Tactics:</strong>
+                            <ul>
+                                <li><strong>Daily "SYSTEM" Posts:</strong> 3-4x weekly static posts with "Comment 'SYSTEM'" CTA and the "P.S. follow me" line.</li>
+                                <li><strong>Viral Reel Production:</strong> 3-5x weekly Reels focused on "FREE TOOLS," "ILLEGAL WEBSITES," and quick "HOW-TO" guides. Implement strong in-Reel CTAs.</li>
+                                <li><strong>Cross-Promotion Strategy:</strong> Actively promote your Instagram on your website and vice-versa.</li>
+                                <li><strong>Engagement Pods (Ethical):</strong> Collaborate with other creators in your niche for mutual support and reach.</li>
+                                <li><strong>DM Conversion Optimization:</strong> Refine your DM scripts for immediate value delivery and clear next steps (e.g., link to a free webinar or lead magnet).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Key Performance Indicators (KPIs):</strong>
+                            <ul>
+                                <li>Follower Growth: 10-20% month-over-month.</li>
+                                <li>Comment-to-DM Conversion Rate: 20%+ of unique commenters initiating a DM.</li>
+                                <li>Reel Average View Duration: 50%+ retention.</li>
+                                <li>Website Traffic from Instagram: 2x increase.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-phase">
+                    <h3>Phase 2: 100K → 500K Followers (Next 6-12 Months)</h3>
+                    <p><strong>Goal:</strong> Dominate your niche, expand your content ecosystem, and build a powerful, engaged community that fuels your offers.</p>
+                    <ul>
+                        <li><strong>Tactics:</strong>
+                            <ul>
+                                <li><strong>Strategic Collaborations:</strong> Partner with larger creators (100K-500K followers) for joint Reels, Lives, and content series.</li>
+                                <li><strong>Paid Traffic for Content Amplification:</strong> Run targeted Instagram/Facebook ads to boost your top-performing "SYSTEM" posts and Reels to a cold audience. Spend $0 on ads for leads, but invest in content reach.</li>
+                                <li><strong>Launch a Podcast/YouTube Channel:</strong> Repurpose long-form versions of your "SYSTEM" and tool guides into audio/video formats, driving traffic back to Instagram.</li>
+                                <li><strong>Community-Exclusive Content:</strong> Offer exclusive content or early access to tools/systems for your most engaged followers (e.g., via Close Friends stories or a private Telegram group).</li>
+                                <li><strong>Automated DM Sequences:</strong> Implement advanced automation to nurture leads from comments more efficiently.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Key Performance Indicators (KPIs):</strong>
+                            <ul>
+                                <li>Follower Growth: 5-10% month-over-month.</li>
+                                <li>Lead Magnet Sign-ups: 1,000+ per month.</li>
+                                <li>Collaboration Reach: 50K+ new unique accounts reached per collaboration.</li>
+                                <li>Engagement Rate: Maintain 5%+ on posts/Reels.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-phase">
+                    <h3>Phase 3: 500K → 1 Million Followers (Next 12-24 Months)</h3>
+                    <p><strong>Goal:</strong> Become the undisputed authority in AI-powered viral growth, scale your offers to a mass audience, and build an unshakeable brand empire.</p>
+                    <ul>
+                        <li><strong>Tactics:</strong>
+                            <ul>
+                                <li><strong>Signature Program/Course Launch:</strong> Develop and launch a comprehensive, high-ticket "AI Viral Growth SYSTEM" program, leveraging your massive audience.</li>
+                                <li><strong>Media & PR Opportunities:</strong> Seek out interviews, speaking engagements, and features in major online business publications.</li>
+                                <li><strong>Team Expansion:</strong> Hire content creators, community managers, and sales support to scale operations.</li>
+                                <li><strong>Global Expansion:</strong> Explore content localization or targeting international markets.</li>
+                                <li><strong>Advanced AI Integration:</strong> Continuously integrate cutting-edge AI into your content creation, analytics, and community management.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Key Performance Indicators (KPIs):</strong>
+                            <ul>
+                                <li>Follower Growth: 3-5% month-over-month.</li>
+                                <li>Program Enrollment: 100+ students per launch.</li>
+                                <li>Brand Mentions/Features: 5+ per quarter.</li>
+                                <li>Revenue Growth: 7-figure annual run rate.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="trend-intelligence">
+                <div class="section-header">
+                    <span class="section-number">08</span>
+                    <h2>Trend Intelligence: Ride the Wave, Don't Get Swallowed</h2>
+                </div>
+                <p>The digital landscape moves fast, Aleksa. To stay ahead, you need to not just react but anticipate. These are the trends you need to be leveraging RIGHT NOW to maintain your edge and scale your influence.</p>
+
+                <h3>8 Active Trends & Your Action Plan:</h3>
+                <ul>
+                    <li><span class="urgency red"></span> <strong>AI Automation for Content Creation:</strong>
+                        <p><strong>Insight:</strong> AI isn't just for tools; it's for automating entire content workflows. Your audience wants to know how to create more, faster, with less effort.</p>
+                        <p><strong>Action:</strong> Create Reels/Posts showcasing your personal AI-powered content creation workflow. "My 1-hour AI content system that generates 7 posts."</p>
+                    </li>
+                    <li><span class="urgency orange"></span> <strong>Short-Form Video Monetization:</strong>
+                        <p><strong>Insight:</strong> Beyond views, creators are finding direct monetization paths through short-form content (e.g., affiliate links in bio, direct product pitches in Reels).</p>
+                        <p><strong>Action:</strong> Develop Reels that explicitly show "How I make $X from a single Reel" or "My 3-step Reel monetization strategy."</p>
+                    </li>
+                    <li><span class="urgency yellow"></span> <strong>Community Building & Gated Content:</strong>
+                        <p><strong>Insight:</strong> Audiences crave belonging and exclusive access. Private communities (Discord, Telegram, paid subscriptions) are becoming critical for loyal fan bases.</p>
+                        <p><strong>Action:</strong> Promote your "7 days free community access" more aggressively. Consider a paid tier for deeper access to your "SYSTEM" or exclusive AI tools.</p>
+                    </li>
+                    <li><span class="urgency red"></span> <strong>Personalized Content Systems:</strong>
+                        <p><strong>Insight:</strong> Generic advice is out. People want systems tailored to their specific niche or business model. AI can help deliver this at scale.</p>
+                        <p><strong>Action:</strong> Offer a "Comment 'NICHE'" CTA where you provide a personalized AI tool recommendation or content idea for their specific business.</p>
+                    </li>
+                    <li><span class="urgency orange"></span> <strong>Affiliate Marketing with AI:</strong>
+                        <p><strong>Insight:</strong> Leveraging AI to identify lucrative affiliate products, create review content, and optimize conversion funnels is a massive opportunity.</p>
+                        <p><strong>Action:</strong> Create content like "How AI helps me find 5-figure affiliate products" or "My AI-powered affiliate content strategy."</p>
+                    </li>
+                    <li><span class="urgency yellow"></span> <strong>Web3/Decentralized Marketing:</strong>
+                        <p><strong>Insight:</strong> While still nascent, understanding NFTs, crypto, and decentralized platforms for marketing is becoming a differentiator for forward-thinking brands.</p>
+                        <p><strong>Action:</strong> Occasional content on "How Web3 will change marketing" or "AI tools for the decentralized web" to position yourself as a futurist.</p>
+                    </li>
+                    <li><span class="urgency green"></span> <strong>Interactive Content Formats:</strong>
+                        <p><strong>Insight:</strong> Polls, quizzes, Q&As, and "choose your own adventure" style content boost engagement and time spent on platform.</p>
+                        <p><strong>Action:</strong> Integrate more interactive elements into your Stories and Reels. Use Instagram's native sticker features for polls and quizzes on AI tools or business challenges.</p>
+                    </li>
+                    <li><span class="urgency red"></span> <strong>Authenticity & Transparency:</strong>
+                        <p><strong>Insight:</strong> Audiences are tired of fake gurus. Raw, honest content about challenges, failures, and real results builds deeper trust.</p>
+                        <p><strong>Action:</strong> Share more behind-the-scenes of your business, your content creation process, or even a challenge you're currently facing and how AI is helping you solve it.</p>
+                    </li>
+                </ul>
+
+                <h3>Algorithm Signals to Exploit:</h3>
+                <ul>
+                    <li><strong>Comment-to-DM Conversions:</strong> The algorithm LOVES when you move conversations off-feed. Your "Comment 'KEYWORD'" strategy is perfectly aligned. Keep pushing this.</li>
+                    <li><strong>Saves & Shares:</strong> These are powerful signals of high-value content. Structure your "FREE TOOLS" and "SYSTEM" content to explicitly ask for saves and shares.</li>
+                    <li><strong>Long Watch-Time on Reels:</strong> Hook viewers in the first 3 seconds. Use dynamic visuals, text overlays, and fast cuts. Deliver value quickly to keep them watching.</li>
+                    <li><strong>Carousels with High Swipe-Through Rate:</strong> Use compelling headlines on each slide and a clear narrative or list structure to encourage swiping through all slides.</li>
+                </ul>
+            </section>
+
+            <section id="newsjacking-engine">
+                <div class="section-header">
+                    <span class="section-number">09</span>
+                    <h2>Newsjacking Engine: Ride the Hype, Go Viral</h2>
+                </div>
+                <p>The news cycle is your content goldmine, Aleksa. When a major AI breakthrough, tech layoff, or business trend hits, you need to be ready to inject your expertise. This isn't just reacting; it's strategically positioning yourself at the center of the conversation. Here are 5 ready-to-post hooks to get you started.</p>
+
+                <div class="newsjacking-opportunity">
+                    <h4>1. Major AI Company Announcement (e.g., OpenAI, Google DeepMind)</h4>
+                    <p><strong>Context:</strong> A new AI model drops, a major feature is released, or a new funding round is announced.</p>
+                    <div class="hook-preview">
+                        🚨 OpenAI just dropped [New Feature/Model Name]! Here's how to use it to get UNLIMITED leads with $0 spent on ads. Comment "AI HACK" and I'll DM you the SYSTEM.
+                        <button class="copy-button" onclick="copyHook(this)">Copy</button>
+                    </div>
+                </div>
+
+                <div class="newsjacking-opportunity">
+                    <h4>2. Economic Downturn / Layoff News</h4>
+                    <p><strong>Context:</strong> News about a recession, job cuts, or economic uncertainty.</p>
+                    <div class="hook-preview">
+                        Layoffs hitting hard? Don't be a victim. Build your own 6-figure business with AI. Comment "FREEDOM" and I'll send you the blueprint to make money online with $0 spent on ads.
+                        <button class="copy-button" onclick="copyHook(this)">Copy</button>
+                    </div>
+                </div>
+
+                <div class="newsjacking-opportunity">
+                    <h4>3. New Social Media Algorithm Change</h4>
+                    <p><strong>Context:</strong> Instagram, TikTok, or YouTube announces a major algorithm update.</p>
+                    <div class="hook-preview">
+                        🚨 The algorithm just changed AGAIN. Most creators are panicking. I'm showing you the NEW SYSTEM to get viral reach and clients without spending a dime. Comment "ALGO" for the update.
+                        <button class="copy-button" onclick="copyHook(this)">Copy</button>
+                    </div>
+                </div>
+
+                <div class="newsjacking-opportunity">
+                    <h4>4. Viral Business Success Story (Leveraging AI)</h4>
+                    <p><strong>Context:</strong> A story breaks about a founder who scaled massively using AI or unconventional methods.</p>
+                    <div class="hook-preview">
+                        He built a $1M business in 6 months with AI. You think it's luck? It's a SYSTEM. Comment "MILLION" and I'll reveal the exact AI tools and strategies he used.
+                        <button class="copy-button" onclick="copyHook(this)">Copy</button>
+                    </div>
+                </div>
+
+                <div class="newsjacking-opportunity">
+                    <h4>5. Debate/Controversy Around AI Ethics or Future</h4>
+                    <p><strong>Context:</strong> A prominent figure warns about AI, or a new ethical dilemma emerges.</p>
+                    <div class="hook-preview">
+                        Everyone's debating AI's future. While they talk, you can be building. Here are 3 AI tools that will make you indispensable, not obsolete. Comment "FUTURE" for the list.
+                        <button class="copy-button" onclick="copyHook(this)">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hook-creator">
+                <div class="section-header">
+                    <span class="section-number">10</span>
+                    <h2>Hook Creator: Generate Viral Captions on Demand</h2>
+                </div>
+                <p>No more guessing games, Aleksa. This is your personal hook generator, built on the exact patterns that make your content go viral. Select your topic, choose your hook type, and get ready to generate engagement that converts. This is your unfair advantage.</p>
+
+                <div class="hook-generator-controls">
+                    <div>
+                        <label for="topicSelect">Select Topic:</label>
+                        <select id="topicSelect">
+                            <option value="system">The "SYSTEM" Blueprint</option>
+                            <option value="ai_tools">AI Tools & Resources</option>
+                            <option value="client_acquisition">Client Acquisition & Leads</option>
+                            <option value="online_business">Online Business & Monetization</option>
+                            <option value="virality">Social Media Growth & Virality</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hookTypeSelect">Select Hook Type:</label>
+                        <select id="hookTypeSelect">
+                            <option value="curiosity">Curiosity Gap</option>
+                            <option value="problem">Problem Amplification</option>
+                            <option value="authority">Authority Challenge</option>
+                            <option value="transformation">Transformation</option>
+                            <option value="pov">POV (Point of View)</option>
+                            <option value="number">Number Hook</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="generateHookBtn">Generate Hook</button>
+                    </div>
+                </div>
+
+                <div id="generatedHookDisplay">
+                    Your next viral hook will appear here. Click "Generate Hook" to unleash it!
+                    <button class="copy-button" onclick="copyHook(this)" style="display: none;">Copy</button>
+                </div>
+
+                <h3>60 Ready-to-Deploy Hooks: Your Content Arsenal</h3>
+                <p>Need instant inspiration? Here's a curated list of 60 hooks, ready to copy, paste, and dominate. These are built on your winning formula.</p>
+                <div class="hook-grid">
+                    <!-- SYSTEM Blueprint -->
+                    <div class="grid-hook-item">🚨 Comment "SYSTEM" and I'll reveal how to get clients with organic content, just like I did. P.S. I can't message you if you don't follow @alexxmarketing. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Stuck getting clients? My "SYSTEM" changed everything. Comment "SYSTEM" and I'll send you the blueprint to unlimited leads with $0 spent on ads. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">They said it couldn't be done: 6-figure business with organic content. I did it. Comment "SYSTEM" for the exact playbook. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">From zero clients to a full pipeline: it's not magic, it's my "SYSTEM." Comment "SYSTEM" to get access. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">This is how I get clients with $0 spent on ads. You want the "SYSTEM"? Comment "SYSTEM" below. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">My 3-step "SYSTEM" for client acquisition is so simple, it feels illegal. Comment "SYSTEM" for the full breakdown. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Don't waste another dollar on ads. My "SYSTEM" gets you clients for free. Comment "SYSTEM" to unlock it. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The only "SYSTEM" you need to scale your online business. Comment "SYSTEM" and I'll send it to you. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">I built a 6-figure business using this exact "SYSTEM." Now it's your turn. Comment "SYSTEM" to get started. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Want to join my community and get the "SYSTEM" 7 days for free? Comment "SYSTEM" now. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+
+                    <!-- AI Tools & Resources -->
+                    <div class="grid-hook-item">🔥 85 FREE TOOLS TO BUILD A BUSINESS IN 2026 🔥 You're missing out if you don't save this. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">These 3 AI tools feel illegal to know. They'll boost your productivity by 10x. Comment "AI HACK" for the list. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">PAID VS. FREE ALTERNATIVES: Stop wasting money. Here are the free AI tools that outperform the paid ones. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">I analyze hundreds of AI tools monthly. Here's my top 5 for getting clients with $0 spent on ads. Comment "TOOLS" for access. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Don't buy that expensive software. These 7 AI tools are FREE and will change your business. SAVE THIS! <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">🚨 35 WEBSITES THAT FEEL SO ILLEGAL 🚨 for content creation and business growth. You need these. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The AI tool that generated 2 billion views for me. Want to know what it is? Comment "VIRAL AI." <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Stop scrolling. These 10 AI tools will make you an unstoppable entrepreneur. Comment "AI POWER" for the full breakdown. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">My secret arsenal of AI tools for organic content and lead generation. Comment "ARSENAL" to get access. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">You're still paying for [X]? Here are 5 FREE AI alternatives that are 10x better. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+
+                    <!-- Client Acquisition & Leads -->
+                    <div class="grid-hook-item">✅ Comment "HOW" to start landing clients 🚀 with your own AI business. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Unlimited leads with $0 spent on ads? It's not a dream. Comment "LEADS" and I'll show you how. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Stop chasing clients. Make them chase you. Comment "CLIENTS" for my organic attraction strategy. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The #1 secret to getting your first 10 clients without a single cold call. Comment "SECRET" to unlock it. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Want to fill your calendar with high-paying clients? Comment "CALENDAR" for my AI-powered lead gen hack. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">I used this one strategy to land 5 new clients in 7 days. Comment "STRATEGY" and I'll share it. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Your competitors are paying for leads. You don't have to. Comment "ORGANIC" for the free lead flow. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">This is how you get unlimited leads with $0 spent on ads. Comment "UNLIMITED" and I'll send you the guide. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Sick of inconsistent clients? My system brings them to you. Comment "CONSISTENT" for the details. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The easiest way to land your next client using AI. Comment "EASY CLIENT" for the step-by-step. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+
+                    <!-- Online Business & Monetization -->
+                    <div class="grid-hook-item">Comment “SYSTEM” to join my community 7 days for free and start making money with $0 spent on ads 🚀 <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Want to build a 6-figure online business? It starts with this. Comment "BUSINESS" for the first step. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Stop trading time for money. Build an online business that works for you. Comment "MONEY" for the playbook. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The only way to scale past 6-figures in 2026. Comment "SCALE" and I'll show you the AI secret. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">How to make money online with $0 spent on ads. It's simpler than you think. Comment "PROFIT" for the method. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">My 3 monetization secrets for online entrepreneurs. Comment "SECRETS" and I'll share them all. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Building an online empire isn't about luck. It's about this. Comment "EMPIRE" for the strategy. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">You can make money online without a massive following. Here's how. Comment "EARN" for the guide. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The path to financial freedom starts here. Comment "FREEDOM" to get my online business roadmap. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Stop struggling to make money online. My system guarantees results. Comment "RESULTS" to learn more. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+
+                    <!-- Social Media Growth & Virality -->
+                    <div class="grid-hook-item">“Mom, why are we so famous?” “Because we locked in after seeing a post in 2025.” Now Comment “MILLION” to start building an audience on social media. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Generated 2 billion views. It's not luck, it's a playbook. Comment "VIRAL" for my social media growth secrets. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Want to go viral every single week? My AI-powered content strategy makes it easy. Comment "VIRALITY" for the SYSTEM. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Stop creating content that flops. This is how you guarantee engagement and growth. Comment "GROWTH" for the hack. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The only way to build a massive audience on social media in 2026. Comment "AUDIENCE" for the blueprint. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">I cracked the algorithm. Here's how you can too. Comment "ALGORITHM" for my viral content formula. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">From 0 to 100K followers with organic content. It's a SYSTEM. Comment "FOLLOWERS" to get it. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Your content isn't reaching enough people. This is why. Comment "REACH" for the fix. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">Want to dominate your niche on social media? Here's the playbook. Comment "DOMINATE" for access. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                    <div class="grid-hook-item">The secret to getting consistent viral hits. It's not what you think. Comment "HITS" for the truth. <button class="copy-button" onclick="copyHook(this)">Copy</button></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scroll for sidebar navigation
+            document.querySelectorAll('.sidebar nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Remove active class from all and add to clicked
+                    document.querySelectorAll('.sidebar nav ul li a').forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Set initial active link based on current scroll position
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.sidebar nav ul li a');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Adjust as needed
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Hook Generator Logic
+            const hooks = {
+                system: {
+                    curiosity: "🚨 Comment 'SYSTEM' and I'll reveal how to get clients with organic content, just like I did. P.S. I can't message you if you don't follow @alexxmarketing.",
+                    problem: "Stuck getting clients? My 'SYSTEM' changed everything. Comment 'SYSTEM' and I'll send you the blueprint to unlimited leads with $0 spent on ads.",
+                    authority: "They said it couldn't be done: 6-figure business with organic content. I did it. Comment 'SYSTEM' for the exact playbook.",
+                    transformation: "From zero clients to a full pipeline: it's not magic, it's my 'SYSTEM.' Comment 'SYSTEM' to get access.",
+                    pov: "This is how I get clients with $0 spent on ads. You want the 'SYSTEM'? Comment 'SYSTEM' below.",
+                    number: "My 3-step 'SYSTEM' for client acquisition is so simple, it feels illegal. Comment 'SYSTEM' for the full breakdown."
+                },
+                ai_tools: {
+                    curiosity: "🔥 85 FREE TOOLS TO BUILD A BUSINESS IN 2026 🔥 You're missing out if you don't save this. Comment 'TOOLS' for the full list.",
+                    problem: "Don't buy that expensive software. These 7 AI tools are FREE and will change your business. SAVE THIS! Comment 'FREE AI' for access.",
+                    authority: "I analyze hundreds of AI tools monthly. Here's my top 5 for getting clients with $0 spent on ads. Comment 'AI HACK' for access.",
+                    transformation: "Stop wasting money. Here are the free AI tools that outperform the paid ones. Comment 'FREE POWER' for the list.",
+                    pov: "These 3 AI tools feel illegal to know. They'll boost your productivity by 10x. Comment 'ILLEGAL AI' for the list.",
+                    number: "🚨 35 WEBSITES THAT FEEL SO ILLEGAL 🚨 for content creation and business growth. You need these. Comment 'WEBSITES' for the full list."
+                },
+                client_acquisition: {
+                    curiosity: "Unlimited leads with $0 spent on ads? It's not a dream. Comment 'LEADS' and I'll show you how.",
+                    problem: "Stop chasing clients. Make them chase you. Comment 'CLIENTS' for my organic attraction strategy.",
+                    authority: "The #1 secret to getting your first 10 clients without a single cold call. Comment 'SECRET' to unlock it.",
+                    transformation: "Want to fill your calendar with high-paying clients? Comment 'CALENDAR' for my AI-powered lead gen hack.",
+                    pov: "This is how you get unlimited leads with $0 spent on ads. Comment 'UNLIMITED' and I'll send you the guide.",
+                    number: "I used this one strategy to land 5 new clients in 7 days. Comment 'STRATEGY' and I'll share it."
+                },
+                online_business: {
+                    curiosity: "Want to build a 6-figure online business? It starts with this. Comment 'BUSINESS' for the first step.",
+                    problem: "Stop trading time for money. Build an online business that works for you. Comment 'MONEY' for the playbook.",
+                    authority: "The only way to scale past 6-figures in 2026. Comment 'SCALE' and I'll show you the AI secret.",
+                    transformation: "How to make money online with $0 spent on ads. It's simpler than you think. Comment 'PROFIT' for the method.",
+                    pov: "My 3 monetization secrets for online entrepreneurs. Comment 'SECRETS' and I'll share them all.",
+                    number: "Comment “SYSTEM” to join my community 7 days for free and start making money with $0 spent on ads 🚀"
+                },
+                virality: {
+                    curiosity: "Generated 2 billion views. It's not luck, it's a playbook. Comment 'VIRAL' for my social media growth secrets.",
+                    problem: "Stop creating content that flops. This is how you guarantee engagement and growth. Comment 'GROWTH' for the hack.",
+                    authority: "I cracked the algorithm. Here's how you can too. Comment 'ALGORITHM' for my viral content formula.",
+                    transformation: "From 0 to 100K followers with organic content. It's a SYSTEM. Comment 'FOLLOWERS' to get it.",
+                    pov: "“Mom, why are we so famous?” “Because we locked in after seeing a post in 2025.” Now Comment “MILLION” to start building an audience on social media.",
+                    number: "Want to go viral every single week? My AI-powered content strategy makes it easy. Comment 'VIRALITY' for the SYSTEM."
+                }
+            };
+
+            const topicSelect = document.getElementById('topicSelect');
+            const hookTypeSelect = document.getElementById('hookTypeSelect');
+            const generateHookBtn = document.getElementById('generateHookBtn');
+            const generatedHookDisplay = document.getElementById('generatedHookDisplay');
+            const generatedHookCopyBtn = generatedHookDisplay.querySelector('.copy-button');
+
+            generateHookBtn.addEventListener('click', () => {
+                const selectedTopic = topicSelect.value;
+                const selectedHookType = hookTypeSelect.value;
+                const hookText = hooks[selectedTopic][selectedHookType];
+                generatedHookDisplay.innerHTML = `${hookText} <button class="copy-button" onclick="copyHook(this)">Copy</button>`;
+                generatedHookCopyBtn.style.display = 'inline-block';
+            });
+        });
+
+        function copyHook(button) {
+            const hookText = button.parentNode.textContent.replace('Copy', '').trim();
+            navigator.clipboard.writeText(hookText).then(() => {
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
